@@ -2,25 +2,39 @@ theme = "onelight"
 
 [editor]
 line-number = "relative"
-cursorline = true
 idle-timeout = 100
 bufferline = "multiple"
+color-modes = true
+
+[editor.statusline]
+separator = " ⛧  "
+left = ["mode", "separator", "spinner", "file-name", "spacer", "version-control"] 
+right = ["spacer", "diagnostics", "selections", "position", "file-encoding"]
 
 [editor.cursor-shape]
 insert = "bar"
+normal = "block"
 select = "underline"
+
+[editor.file-picker]
+hidden = false
 
 [editor.indent-guides]
 render = true
+skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
 
-# [keys.normal]
+[keys.normal."space"]
+"=" = ":format"
+f = "file_picker_in_current_directory"
+F = "file_picker"
+c = "command_mode"
 
 [keys.normal.g]
-j = "goto_last_line" 
-k = "goto_file_start" 
+j = "goto_last_line"
+k = "goto_file_start"
 
 # [keys.insert]
-# j = { k = "normal_mode"}
+# j = { k = "normal_mode" }
