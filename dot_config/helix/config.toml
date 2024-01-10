@@ -1,0 +1,26 @@
+theme = "onelight"
+
+[editor]
+line-number = "relative"
+cursorline = true
+idle-timeout = 100
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
+select = "underline"
+
+[editor.indent-guides]
+render = true
+
+[editor.soft-wrap]
+enable = true
+
+# [keys.normal]
+
+[keys.normal.g]
+j = "goto_last_line" 
+k = "goto_file_start" 
+
+# [keys.insert]
+# j = { k = "normal_mode"}

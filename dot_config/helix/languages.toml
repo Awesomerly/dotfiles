@@ -1,0 +1,58 @@
+[[language]]
+name = "python"
+roots = ["pyproject.toml"]
+formatter = { command = "black", args = ["-", "-q"] }
+auto-format = true
+
+[[language]]
+name = "html"
+formatter = { command = 'npx', args = ["prettier", "--parser", "html"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[[language]]
+name = "css"
+formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[[language]]
+name = "json"
+language-servers = [ "typescript-language-server", "eslint" ]
+formatter = { command = 'npx', args = ["prettier", "--parser", "json"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[[language]]
+name = "css"
+language-servers = [ "typescript-language-server", "eslint" ]
+formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server", "eslint" ]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [ "typescript-language-server", "eslint" ]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [ "typescript-language-server", "eslint" ]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[[language]]
+name = "c"
+language-servers = [ "clangd" ]
+formatter = { command='clang-format', args=['-style', "{ IndentWidth: 4 }"]}
+indent = { tab-width = 4, unit = "    " }
