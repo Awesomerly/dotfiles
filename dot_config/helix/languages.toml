@@ -1,3 +1,10 @@
+# Language Servers
+[language-server.vtsls]
+command = "vtsls"
+args = ["--stdio"]
+
+# Languages
+
 [[language]]
 name = "python"
 roots = ["pyproject.toml"]
