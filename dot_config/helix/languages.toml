@@ -13,48 +13,48 @@ auto-format = true
 
 [[language]]
 name = "html"
-formatter = { command = 'npx', args = ["prettier", "--parser", "html"] }
+formatter = { command = 'npx', args = ["prettier"] }
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
 
 [[language]]
 name = "css"
-formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
+formatter = { command = 'npx', args = ["prettier"] }
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
 
 [[language]]
 name = "json"
 language-servers = [ "typescript-language-server", "eslint" ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "json"] }
+formatter = { command = 'npx', args = ["prettier"] }
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
 
 [[language]]
 name = "css"
 language-servers = [ "typescript-language-server", "eslint" ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "css"] }
+formatter = { command = 'npx', args = ["prettier"] }
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
 
 [[language]]
 name = "javascript"
 language-servers = [ "typescript-language-server", "eslint" ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'npx', args = ["prettier"] }
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
 
 [[language]]
 name = "typescript"
 language-servers = [ "typescript-language-server", "eslint" ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'npx', args = ["prettier"] }
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
 
 [[language]]
 name = "tsx"
 language-servers = [ "typescript-language-server", "eslint" ]
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+formatter = { command = 'npx', args = ["prettier"] }
 indent = { tab-width = 4, unit = "\t" }
 auto-format = true
 
