@@ -8,7 +8,14 @@ color-modes = true
 
 [editor.statusline]
 separator = " ⛧  "
-left = ["mode", "separator", "spinner", "file-name", "spacer", "version-control"] 
+left = [
+  "mode",
+  "separator",
+  "spinner",
+  "file-name",
+  "spacer",
+  "version-control",
+]
 right = ["spacer", "diagnostics", "selections", "position", "file-encoding"]
 
 [editor.cursor-shape]
@@ -18,6 +25,10 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.lsp]
+display-messages = true
+# display-inlay-hints = true
 
 [editor.indent-guides]
 render = true

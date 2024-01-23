@@ -7,6 +7,25 @@ args = ["--stdio"]
 command = "vscode-eslint-language-server"
 args = ["--stdio"]
 
+[language-server.eslint.config]
+codeActionsOnSave = { mode = "all", "source.fixAll.eslint" = true }
+format = { enable = true }
+nodePath = ""
+quiet = false
+rulesCustomizations = []
+run = "onType"
+validate = "on"
+experimental = {}
+problems = { shortenToSingleLine = false }
+
+[language-server.eslint.config.codeAction]
+disableRuleComment = { enable = true, location = "separateLine" }
+showDocumentation = { enable = false }
+
+[language-server.vscode-json-language-server.config]
+json = { validate = { enable = true }, format = { enable = false } }
+provideFormatter = true
+
 # Languages
 
 [[language]]
@@ -17,40 +36,52 @@ auto-format = true
 
 [[language]]
 name = "html"
-formatter = { command = 'prettier', args = ["--parser", "html"] }
+formatter = { command = "prettier", args = ["--parser", "html"] }
 auto-format = true
 
 [[language]]
 name = "css"
-formatter = { command = 'prettier', args = ["--parser", "css"] }
+formatter = { command = "prettier", args = ["--parser", "css"] }
 auto-format = true
 
 [[language]]
 name = "json"
-language-servers = [ "typescript-language-server", "eslint" ]
-formatter = { command = 'prettier', args = ["--parser", "json"] }
+formatter = { command = "prettier", args = ["--parser", "json"] }
 auto-format = true
 
 [[language]]
 name = "javascript"
-language-servers = [ "typescript-language-server", "eslint" ]
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+language-servers = [{ except-features = ["format"], name = "vtsls" }, "eslint"]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "typescript"
-language-servers = [ "typescript-language-server", "eslint" ]
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+language-servers = [{ except-features = ["format"], name = "vtsls" }, "eslint"]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "tsx"
-language-servers = [ "typescript-language-server", "eslint" ]
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+language-servers = [{ except-features = ["format"], name = "vtsls" }, "eslint"]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = [{ except-features = ["format"], name = "vtsls" }, "eslint"]
+formatter = { command = "prettier", args = ["--parser", "typescript"] }
 auto-format = true
 
 [[language]]
 name = "c"
-language-servers = [ "clangd" ]
-formatter = { command='clang-format', args=['-style', "{ IndentWidth: 4 }"]}
+language-servers = ["clangd"]
+formatter = { command = 'clang-format', args = [
+  '-style',
+  "{ IndentWidth: 4 }",
+] }
 indent = { tab-width = 4, unit = "    " }
+
+[[lanugage]]
+name = "toml"
+auto-format = true
