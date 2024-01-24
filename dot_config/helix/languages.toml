@@ -76,11 +76,7 @@ auto-format = true
 [[language]]
 name = "c"
 language-servers = ["clangd"]
-formatter = { command = 'clang-format', args = [
-  '-style',
-  "{ IndentWidth: 4 }",
-] }
-indent = { tab-width = 4, unit = "    " }
+formatter = { command = 'clang-format', args = ['-style=file'] }
 
 [[lanugage]]
 name = "toml"
